@@ -58,6 +58,7 @@
   margin-top: 5px;
   margin-right: 5px;
   padding: 0;
+  font-size: unset !important;
 }
 
 .updateColorButton {
@@ -166,12 +167,6 @@
   .deficiencyCheck {
     font-size: 12px;
   }
-  .signinButton {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100px;
-    height: auto;
-  }
   .aboutButton {
     font-size: 12px;
   }
@@ -226,4 +221,8 @@
 
 .dropdown p {
   margin: 0px;
+}
+
+.googleButton{
+  margin-top:-15px;
 }

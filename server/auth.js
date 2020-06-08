@@ -1,5 +1,9 @@
 //let GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-let GoogleStrategy = require('passport-google-oauth20');
+//let GoogleStrategy = require('passport-google-oauth20');
+
+const secret = require('./serverConstants');
+
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 module.exports = (passport) => {
   passport.serializeUser((user, done) => {

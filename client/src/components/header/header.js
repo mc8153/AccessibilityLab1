@@ -4,6 +4,7 @@ import "./../../vendor/bootstrap/css/bootstrap.min.css";
 import "./../../css/agency.min.css";
 import "./../../css/style.css";
 
+import { Google } from "../header/buttons/google";
 import {connect} from "react-redux";
 import {actions as appActions} from '../../reducers/AppReducer';
 import {bindActionCreators} from 'redux';
@@ -115,7 +116,7 @@ const Header = (props) => {
                         <Nav className="mr-auto labul" navbar>
                             <NavItem class="collapse navbar-collapse"
                                      id="navbarResponsive"
-                                     style={{marginLeft: "280px"}}> </NavItem>
+                                     style={{marginLeft: "17%"}}> </NavItem>
                             <NavItem class="collapse navbar-collapse"
                                      id="navbarResponsive"
                             >
@@ -195,7 +196,7 @@ const Header = (props) => {
                             </NavItem>
                             <NavItem
                                 class=" collapse navbar-collapse"
-                                id="navbarResponsive" style={{marginRight: "70px"}}>
+                                id="navbarResponsive" style={{marginRight: "20px"}}>
                                 <NavLink
                                         class="nav-link js-scroll-trigger"
                                         onClick={() => handleQuiz(actions, state)}
@@ -207,6 +208,26 @@ const Header = (props) => {
                                             </li>
                                         </ul>
                                     </NavLink>
+                            </NavItem>
+                            <NavItem
+                                class=" collapse navbar-collapse"
+                                id="navbarResponsive">
+                                <NavLink
+                                    class="nav-link js-scroll-trigger"
+                                    style={count === 5 ? activeStyle : null}>
+                                    <ul className="navbar-nav text-uppercase ml-auto">
+                                        <li className="nav-item">
+                                            <Google />
+                                            {/*<a href={process.env.REACT_APP_SERVER_URL + "/auth/google"}>
+                                                <div
+                                                    className="google__button"
+                                                    aria-label={"Google SignIn Button"}
+                                                    tabIndex={"0"}
+                                                />
+                                            </a>*/}
+                                        </li>
+                                    </ul>
+                                </NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
